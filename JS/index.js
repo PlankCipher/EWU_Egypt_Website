@@ -12,4 +12,20 @@ $(document).ready(function () {
         }
         $("nav ul").toggleClass("displayed");
     });
+
+    $(window).on("scroll", function () {
+        var links = $("nav ul li").children("a");
+
+        var stop = Math.round($(window).scrollTop());
+
+        for (var link of links) {
+            $(link).removeClass("current");
+            var scrollToOffset = $("#" + $(link).attr("data-scroll-to")).offset().top;
+
+            if (stop + ($(window).height() / 2) > scrollToOffset) {
+                $(link).addClass("current");
+                break;
+            }
+        }
+    });
 });
