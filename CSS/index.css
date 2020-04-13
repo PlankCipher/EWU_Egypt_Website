@@ -161,4 +161,9 @@ main .land p {
         border: none;
         color: #fff;
     }
+
+    nav ul .current {
+        border: none;
+        color: #fff;
+    }
 }
