@@ -28,4 +28,10 @@ $(document).ready(function () {
             }
         }
     });
+
+    $("nav ul li a").on("click", function () {
+        $("html, body").animate({
+            scrollTop: $("#" + $(this).attr("data-scroll-to")).offset().top
+        }, 1500);
+    });
 });
