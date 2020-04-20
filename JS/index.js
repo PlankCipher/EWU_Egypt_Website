@@ -15,6 +15,18 @@ $(document).ready(function () {
         $("nav ul").toggleClass("displayed");
     });
 
+    $("nav ul li a").on("click", function () {
+        var navBarHeight = $("nav").height();
+
+        $("html, body").animate({
+            scrollTop: $("#" + $(this).attr("data-scroll-to")).offset().top - navBarHeight
+        }, 1000);
+
+        $("nav i").removeClass("fa-times");
+        $("nav i").addClass("fa-bars");
+        $("nav ul").removeClass("displayed");
+    });
+
     $(window).on("scroll", function () {
         changeCurrent();
     });
@@ -41,15 +53,9 @@ $(document).ready(function () {
         }
     }
 
-    $("nav ul li a").on("click", function () {
-        var navBarHeight = $("nav").height();
-
-        $("html, body").animate({
-            scrollTop: $("#" + $(this).attr("data-scroll-to")).offset().top - navBarHeight
-        }, 1000);
-
-        $("nav i").removeClass("fa-times");
-        $("nav i").addClass("fa-bars");
-        $("nav ul").removeClass("displayed");
+    $("#email").on("change", function () {
+        var email = $("#email").val();
+        email = encodeURIComponent(email);
+        $("#custom").val(email);
     });
 });

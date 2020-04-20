@@ -4,6 +4,10 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+:root {
+    --color: #5ee1ff;
+}
+
 body {
     padding: 0px;
     margin: 0px;
@@ -60,8 +64,8 @@ nav ul li {
 }
 
 nav ul .current {
-    border-bottom: 2px solid #5ee1ff;
-    color: #5ee1ff;
+    border-bottom: 2px solid var(--color);
+    color: var(--color);
 }
 
 nav ul a {
@@ -72,8 +76,8 @@ nav ul a {
 }
 
 nav ul a:hover {
-    border-bottom: 2px solid #5ee1ff;
-    color: #5ee1ff;
+    border-bottom: 2px solid var(--color);
+    color: var(--color);
 }
 
 nav i {
@@ -113,13 +117,15 @@ main .land p {
     color: #fff;
 }
 
-.about {
+.about,
+.register {
     padding: 60px 0px;
     text-align: center;
 }
 
 .about h1,
-.discover h1 {
+.discover h1,
+.register h1 {
     margin-top: 0px;
     text-align: center;
 }
@@ -187,6 +193,36 @@ main .land p {
     border-top: 2px solid rgb(179, 179, 179);
     padding: 13px 0px;
     margin: 0px
+}
+
+.register .email {
+    padding: 10px;
+    font-size: 22px;
+    display: block;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 500px;
+    border: 2px solid #34495e;
+}
+
+.register input[type=image] {
+    display: none
+}
+
+.register .submit {
+    font-size: 22px;
+    padding: 10px 15px;
+    background: none;
+    border: 2px solid #34495e;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.register .submit:hover {
+    background-color: #34495e;
+    transform: scale(1.1);
+    color: rgb(255, 255, 255);
 }
 
 @media only screen and (max-width: 650px) {
