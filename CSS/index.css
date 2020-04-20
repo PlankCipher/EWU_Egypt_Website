@@ -19,12 +19,51 @@ body {
     margin: 0px auto;
 }
 
+.moverlay {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.767);
+    position: fixed;
+    z-index: 99999;
+    display: none;
+}
+
+.message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    max-width: 400px;
+    font-size: 17px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 7px;
+}
+
+.message i {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out
+}
+
+.message i:hover {
+    transform: rotate(360deg)
+}
+
+.message p {
+    margin: 0px;
+}
+
 nav {
     height: 80px;
     background-color: rgba(0, 0, 0, 0.801);
     position: fixed;
     width: 100%;
-    z-index: 99999;
+    z-index: 9999;
 }
 
 nav .container {

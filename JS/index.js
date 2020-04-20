@@ -3,6 +3,31 @@ $(document).ready(function () {
 
     changeCurrent();
 
+    $(".moverlay i").click(function () {
+        $(".moverlay").css("display", "none");
+    });
+
+    var urlParams;
+    (window.onpopstate = function () {
+        var match,
+            pl = /\+/g, // Regex for replacing addition symbol with a space
+            search = /([^&=]+)=?([^&]*)/g,
+            decode = function (s) {
+                return decodeURIComponent(s.replace(pl, " "));
+            },
+            query = window.location.search.substring(1);
+
+        urlParams = {};
+        while (match = search.exec(query)) {
+            urlParams[decode(match[1])] = decode(match[2]);
+        }
+    })();
+
+    if (urlParams["m"]) {
+        $(".moverlay").css("display", "block");
+        $(".moverlay p").text(urlParams["m"]);
+    }
+
     var togglerBtn = $("nav i");
     togglerBtn.click(function () {
         if (togglerBtn.hasClass("fa-bars")) {
