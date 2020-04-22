@@ -19,10 +19,9 @@ $(document).ready(function () {
 
         urlParams = {};
         while (match = search.exec(query)) {
-            urlParams[decode(match[1])] = decode(match[2]);
+            urlParams[decode(match[1])] = decode(decode(match[2]));
         }
     })();
-
     if (urlParams["m"]) {
         $(".moverlay").css("display", "block");
         $(".moverlay p").text(urlParams["m"]);
