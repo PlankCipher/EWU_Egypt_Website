@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+	<!-- meta tags -->
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description"
@@ -9,6 +10,7 @@
 
 	<title>EWU Egypt</title>
 
+	<!-- Website icon stuff -->
 	<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
@@ -19,10 +21,12 @@
 	<meta name="msapplication-config" content="images/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
 
+	<!-- Style -->
 	<link rel="stylesheet" href="CSS/index.css">
 </head>
 
 <body>
+	<!-- Message box -->
 	<div class="moverlay">
 		<div class="message">
 			<i class="far fa-times-circle"></i>
@@ -30,13 +34,16 @@
 		</div>
 	</div>
 
+	<!-- Nav bar -->
 	<nav>
 		<div class="container">
+			<!-- Logo -->
 			<div class="logo">
 				<img src="images/logo.jpeg" alt="EWU Egypt logo">
 				<span>Egypt</span>
 			</div>
 
+			<!-- List of links -->
 			<ul>
 				<li>
 					<a href="javascript:void(0);" data-scroll-to="about">About</a>
@@ -51,17 +58,20 @@
 					<a href="javascript:void(0);" data-scroll-to="contactus">Contact us</a>
 				</li>
 			</ul>
+			<!-- Nav menu toggler -->
 			<i class="fas fa-bars"></i>
 		</div>
 	</nav>
 
 	<main>
+		<!-- Land section -->
 		<div class="land">
 			<div class="overlay">
 				<p>The spark that makes heavy smoke</p>
 			</div>
 		</div>
 
+		<!-- About section -->
 		<div class="about" id="about">
 			<div class="container">
 				<h1>About</h1>
@@ -76,21 +86,25 @@
 			</div>
 		</div>
 
+		<!-- Discover section -->
 		<div class="discover" id="discover">
 			<div class="overlay">
 				<div class="container">
 					<h1>What's there?</h1>
 					<div class="cards-wrapper">
+						<!-- Card -->
 						<div class="card">
 							<img src="images/logo.jpeg" alt="Someone">
 							<p class="name">Someone</p>
 							<p class="job">Performer</p>
 						</div>
+						<!-- Card -->
 						<div class="card">
 							<img src="images/logo.jpeg" alt="Someone">
 							<p class="name">Someone else</p>
 							<p class="job">Speaker</p>
 						</div>
+						<!-- Card -->
 						<div class="card">
 							<img src="images/logo.jpeg" alt="Someone">
 							<p class="name">Someone else</p>
@@ -101,9 +115,11 @@
 			</div>
 		</div>
 
+		<!-- Register section -->
 		<div class="register" id="register">
 			<div class="container">
 				<h1>Register</h1>
+				<!-- Paypal form of tickets -->
 				<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 					<input type="hidden" name="cmd" value="_s-xclick">
 					<input type="hidden" name="hosted_button_id" value="LLJJ6K723JDDJ">
@@ -120,10 +136,12 @@
 			</div>
 		</div>
 
+		<!-- Contact us section -->
 		<div class="contactus" id="contactus">
 			<div class="container">
 				<h1>Ready when you are</h1>
 				<p>Mail us at <b>ewucontactus@gmail.com</b> or use the form below.</p>
+				<!-- Contact us form -->
 				<form action="sendmail" method="post">
 					<input type="email" name="mail" placeholder="Email address..." required>
 					<input type="text" name="subject" placeholder="Subject..." required>
@@ -134,19 +152,23 @@
 		</div>
 	</main>
 
+	<!-- Footer -->
 	<footer>
 		<div class="container">
+			<!-- Logo -->
 			<div class="logo">
 				<img src="images/logo.jpeg" alt="EWU Egypt logo">
 				<span>Egypt</span>
 			</div>
 			<p>Developed by Youssef Ashour (PlankCipher)</p>
+			<!-- Website repo -->
 			<a href="https://github.com/PlankCipher/EWU_Egypt_Website" target="_blank" rel="noopener">
 				<i class="fab fa-github-square"></i>
 			</a>
 		</div>
 	</footer>
 
+	<!-- Call for JQuery, font awesome and my JS file -->
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
 		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	<script src="https://kit.fontawesome.com/a467a599ad.js" crossorigin="anonymous"></script>
