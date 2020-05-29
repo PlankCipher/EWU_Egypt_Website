@@ -111,7 +111,7 @@ $(document).ready(function () {
     // Set the value of the "custom" input
     // in the ticket form to be the email
     // encoded
-    $("#email").on("change", function () {
+    $("#email").on("input", function () {
         var email = $("#email").val();
         email = encodeURIComponent(email);
         $("#custom").val(email);
